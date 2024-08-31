@@ -14,7 +14,7 @@
   <remote fetch="https://github.com/seL4" name="seL4"/>
   <remote fetch="https://github.com/SEL4PROJ" name="sel4proj"/>
   <remote fetch="https://github.com/ezelioli" name="ezelioli"/>
-  <remote fetch="https://github.com/riscv-software-src" name="opensbi"/>
+  <remote fetch="https://github.com/catme0w" name="catme0w"/>
   
   <default remote="seL4" revision="master"/>
   
@@ -28,10 +28,10 @@
     <linkfile dest="griddle" src="cmake-tool/griddle"/>
   </project>
   <project name="sel4runtime.git" path="projects/sel4runtime" remote="sel4proj" revision="d935dd05da0cf959e9fd0140af913dc6fdaa0221" upstream="master"/>
-  <project name="sel4_riscv_vmm.git" path="projects/sel4_riscv_vmm" remote="ezelioli" revision="cva6" upstream="cva6">
+  <project name="sel4_riscv_vmm.git" path="projects/sel4_riscv_vmm" remote="catme0w" upstream="master">
     <linkfile dest="easy-settings.cmake" src="easy-settings.cmake"/>
     <linkfile dest="settings.cmake" src="settings.cmake"/>
   </project>
   <project name="util_libs.git" path="projects/util_libs" revision="5df1034155667093a5e7a435b621067013ed8c26" upstream="master"/>
-  <project name="opensbi" remote="opensbi" upstream="release-1.3.x" revision="release-1.3.x" path="tools/opensbi"/>
+  <project name="opensbi" remote="ezelioli" upstream="cva6" revision="cva6" path="tools/opensbi"/>
 </manifest>
