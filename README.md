@@ -3,8 +3,16 @@ Note: The code is experimental and not maintained as the same degree as our othe
 The VMM supports v0.6.1 of the RISC-V Hypervisor Extension.
 
 ## Getting the code
+
+### Use upstream
 ```console
 repo init -u https://github.com/SEL4PROJ/sel4-riscv-vmm-manifest.git -m master.xml
+repo sync
+```
+
+### Use this fork
+```console
+repo init -u https://github.com/CatMe0w/sel4-riscv-vmm-manifest.git -m catme0w.xml
 repo sync
 ```
 
