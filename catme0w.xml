@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+     Copyright 2019, Data61
+     Commonwealth Scientific and Industrial Research Organisation (CSIRO)
+     ABN 41 687 119 230.
+
+     This software may be distributed and modified according to the terms of
+     the BSD 2-Clause license. Note that NO WARRANTY is provided.
+     See "LICENSE_BSD2.txt" for details.
+
+     @TAG(DATA61_BSD)
+-->
+<manifest>
+  <remote fetch="https://github.com/seL4" name="seL4"/>
+  <remote fetch="https://github.com/SEL4PROJ" name="sel4proj"/>
+  <remote fetch="https://github.com/ezelioli" name="ezelioli"/>
+  <remote fetch="https://github.com/riscv-software-src" name="opensbi"/>
+  
+  <default remote="seL4" revision="master"/>
+  
+  <project name="musllibc.git" path="projects/musllibc" remote="seL4" revision="3d6b939e8f05cb1d2a1a8c8166609bf2e652e975" upstream="sel4"/>
+  <project name="riscv-pk" path="tools/riscv-pk" remote="seL4" revision="riscv_he_v0.6"/>
+  <project name="seL4.git" path="kernel" remote="ezelioli" revision="cva6" upstream="cva6"/>
+  <project name="seL4_libs.git" path="projects/seL4_libs" remote="ezelioli" revision="cva6" upstream="cva6"/>
+  <project name="seL4_tools.git" path="tools/seL4" remote="ezelioli" revision="cva6" upstream="cva6">
+    <linkfile dest="CMakeLists.txt" src="cmake-tool/default-CMakeLists.txt"/>
+    <linkfile dest="init-build.sh" src="cmake-tool/init-build.sh"/>
+    <linkfile dest="griddle" src="cmake-tool/griddle"/>
+  </project>
+  <project name="sel4runtime.git" path="projects/sel4runtime" remote="sel4proj" revision="d935dd05da0cf959e9fd0140af913dc6fdaa0221" upstream="master"/>
+  <project name="sel4_riscv_vmm.git" path="projects/sel4_riscv_vmm" remote="ezelioli" revision="cva6" upstream="cva6">
+    <linkfile dest="easy-settings.cmake" src="easy-settings.cmake"/>
+    <linkfile dest="settings.cmake" src="settings.cmake"/>
+  </project>
+  <project name="util_libs.git" path="projects/util_libs" revision="5df1034155667093a5e7a435b621067013ed8c26" upstream="master"/>
+  <project name="opensbi" remote="opensbi" upstream="release-1.5.x" revision="release-1.5.x" path="tools/opensbi"/>
+</manifest>
